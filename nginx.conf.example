@@ -1,0 +1,33 @@
+server {
+    listen 80;
+    server_name tu-dominio.com www.tu-dominio.com;
+    root /var/www/tu-dominio.com;
+    index index.html;
+
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html { internal; }
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 512;
+    gzip_types text/plain text/css text/xml application/javascript
+               application/json image/svg+xml application/manifest+json;
+
+    location ~* \.(css|js|svg|webp|png|jpg|jpeg|woff2?)$ {
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+    
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+}

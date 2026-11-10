@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fútbol Libre TV - Señal en vivo del canal</title>
+<meta name="description" content="Canal en vivo de Fútbol Libre TV: Mira la señal en HD desde el celular, la computadora o el Smart TV. Gratis y sin registro.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#16a34a" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1512" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+
+<link rel="canonical" href="/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="manifest" href="site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Fútbol Libre TV">
+<meta property="og:title" content="Fútbol Libre TV - Señal en vivo del canal">
+<meta property="og:description" content="Canal en vivo de Fútbol Libre TV: señal en HD, gratis y sin registro.">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta property="og:image:alt" content="Fútbol Libre TV — fútbol en vivo desde Perú">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fútbol Libre TV - Señal en vivo del canal">
+<meta name="twitter:description" content="Canal en vivo de Fútbol Libre TV: señal en HD, gratis y sin registro.">
+<meta name="twitter:image" content="assets/img/og-image.png">
+<meta name="twitter:image:alt" content="Fútbol Libre TV — fútbol en vivo desde Perú">
+
+<link rel="preconnect" href="https://agenda18.com" crossorigin>
+<link rel="preconnect" href="https://img.agenda18.com" crossorigin>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+
+<body class="page-channel">
+
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+<header class="site-header">
+  <a class="logo" href="/">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <rect width="32" height="32" rx="9" fill="rgba(255,255,255,.18)"></rect>
+      <path d="M13 10.2v11.6a1 1 0 0 0 1.52.85l9.2-5.8a1 1 0 0 0 0-1.7l-9.2-5.8A1 1 0 0 0 13 10.2Z" fill="#fff"></path>
+      <circle class="logo-dot" cx="9" cy="16" r="2.6"></circle>
+    </svg>
+    Futbol<i>Libre</i><span class="visually-hidden"> TV — Inicio</span>
+  </a>
+
+  <nav class="navbar" aria-label="Canales y secciones">
+    <a href="/">Inicio</a>
+    <a href="canal.html?envivo=directv-sports">DSports</a>
+    <a href="canal.html?envivo=directv-sports-2">DSports 2</a>
+    <a href="canal.html?envivo=directv-sports-plus">DSports+</a>
+    <a href="canal.html?envivo=espn-1">ESPN</a>
+    <a href="canal.html?envivo=espn-2">ESPN 2</a>
+    <a href="canal.html?envivo=espn-3">ESPN 3</a>
+    <a href="canal.html?envivo=fox-sports-1">Fox Sports</a>
+    <a href="canal.html?envivo=fox-sports-2">Fox Sports 2</a>
+    <a href="canal.html?envivo=fox-sports-3">Fox Sports 3</a>
+  </nav>
+
+  <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+</header>
+
+<div id="menu-modal" class="menu-modal" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="menu-modal__panel">
+    <button id="menu-close" class="menu-modal__close" type="button" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <nav class="menu-modal__nav" aria-label="Canales y secciones">
+      <a href="/" aria-current="page">Inicio</a>
+      <a href="canal.html?envivo=directv-sports">DSports</a>
+      <a href="canal.html?envivo=directv-sports-2">DSports 2</a>
+      <a href="canal.html?envivo=directv-sports-plus">DSports+</a>
+      <a href="canal.html?envivo=espn-1">ESPN</a>
+      <a href="canal.html?envivo=espn-2">ESPN 2</a>
+      <a href="canal.html?envivo=espn-3">ESPN 3</a>
+      <a href="canal.html?envivo=fox-sports-1">Fox Sports</a>
+      <a href="canal.html?envivo=fox-sports-2">Fox Sports 2</a>
+      <a href="canal.html?envivo=fox-sports-3">Fox Sports 3</a>
+    </nav>
+  </div>
+</div>
+
+<main id="contenido">
+
+  <div class="player">
+    <div class="player__frame is-loading">
+      <iframe id="embedIframe" title="Canal en vivo"
+              allowfullscreen scrolling="no" frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              referrerpolicy="no-referrer"></iframe>
+    </div>
+    <div class="player__actions">
+      <button id="btnIframe" class="btn" type="button">↻ Recargar canal</button>
+      <p class="player-hint">Si la señal se congela, recarga el canal o vuelve a la <a href="/#agenda">agenda</a> para elegir otra.</p>
+    </div>
+  </div>
+
+  <section class="channel-info">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span aria-hidden="true">›</span>
+      <span id="breadcrumb-current" aria-current="page">Canal en vivo</span>
+    </nav>
+
+    <h1 id="channel-title">Canal en vivo</h1>
+
+    <div class="prose" id="channel-body">
+      <p>Cargando la información del canal…</p>
+      <noscript>
+        <p>Activa JavaScript para ver la ficha completa del canal y cargar el reproductor.</p>
+      </noscript>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span><strong>Fútbol Libre TV</strong> · <span id="year">2026</span></span>
+  <p class="site-footer__legal">
+    Sitio independiente. No alojamos ni retransmitimos señales: la agenda enlaza a fuentes de terceros que son responsables de su propio contenido. Respeta los derechos de transmisión de cada evento y la normativa vigente en tu país.
+  </p>
+</footer>
+
+</body>
+</html>
