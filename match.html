@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ver partido en vivo gratis | Futbol libre TV</title>
+<meta name="description" content="Ver el partido en vivo gratis con todas sus senales: horario en tu zona horaria, cuenta regresiva y reproductor. Futbol libre TV, futbol en vivo gratis.">
+<meta name="keywords" content="ver partido en vivo gratis, futbol en vivo gratis, futbol libre tv, ver futbol en vivo gratis, partidos de hoy en vivo gratis, espn en vivo gratis, tyc sports en vivo, copa libertadores en vivo, champions league en vivo">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="Futbol Libre">
+<meta name="theme-color" content="#45c51f" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1510" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="match.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/img/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="video.other">
+<meta property="og:site_name" content="Futbol Libre">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Ver partido en vivo gratis | Futbol libre TV">
+<meta property="og:description" content="Horario, estado y senales del partido, con reproductor y cuenta regresiva. Futbol en vivo gratis.">
+<meta property="og:url" content="match.html">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Reproductor de Futbol libre TV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ver partido en vivo gratis | Futbol libre TV">
+<meta name="twitter:description" content="Horario, estado y senales del partido en un solo lugar.">
+<meta name="twitter:image" content="assets/img/og-image.png">
+<link rel="preconnect" href="https://agenda18.com" crossorigin>
+<link rel="preconnect" href="https://img.agenda18.com" crossorigin>
+<link rel="dns-prefetch" href="https://la18hd.su">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/config.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header" id="cabecera">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Futbol Libre, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="18" height="18"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 7l5.6 4.1-2.1 6.6h-7L10.4 11.1z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text">Futbol Libre<small>TV · En vivo gratis</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Secciones del sitio">
+      <a href="index.html">Inicio</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="channels.html">Canales</a>
+    </nav>
+    <span class="update-pill" id="updatePill" title="La agenda se actualiza sola cada minuto"><span class="dot"></span><span id="updateText">Cargando agenda…</span></span>
+  </div>
+</header>
+
+<main class="container event-page" id="contenido">
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <ol>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><span aria-current="page" id="crumbTitle">Partido</span></li>
+    </ol>
+  </nav>
+
+  <div class="event-utility">
+    <a class="back" href="agenda.html">&larr; Volver<span class="back-full"> a la agenda</span></a>
+    <div class="event-category"><p class="eyebrow" id="evCompetition"></p></div>
+  </div>
+
+  <h1 id="evTitle">Cargando partido…</h1>
+  <p class="event-meta" id="evMeta"></p>
+
+  <section class="lifecycle" id="lifecycle">
+    <p class="lifecycle-status" id="lifecycleStatus" role="status">Cargando…</p>
+    <p id="lifecycleTime"></p>
+    <div class="countdown" id="countdown" role="timer" aria-live="off" aria-label="Tiempo restante">
+      <span><b data-part="0">—</b><small>Dias</small></span>
+      <span><b data-part="1">—</b><small>Horas</small></span>
+      <span><b data-part="2">—</b><small>Minutos</small></span>
+      <span><b data-part="3">—</b><small>Segundos</small></span>
+    </div>
+    <div class="live-timer" id="liveTimer" hidden>
+      <span class="live-timer-flag"><span class="live-timer-dot" aria-hidden="true"></span>En vivo</span>
+      <span class="live-timer-parts" role="timer" aria-live="off" aria-label="Tiempo desde el inicio">
+        <b data-live="0">00</b><i aria-hidden="true">:</i><b data-live="1">00</b><i aria-hidden="true">:</i><b data-live="2">00</b>
+      </span>
+      <small>Tiempo desde el inicio del partido</small>
+    </div>
+  </section>
+
+  <div class="player-panel">
+    <div class="player-box">
+      <div class="player-placeholder" id="playerPlaceholder">
+        <span>Elige una fuente</span>
+        <small>La senal depende del proveedor de cada fuente. Si una no carga, prueba con otra. Doble clic en el reproductor para ponerlo en pantalla completa.</small>
+      </div>
+      <iframe id="playerFrame" title="Reproductor de la fuente" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen playsinline referrerpolicy="no-referrer" loading="eager" style="display:none"></iframe>
+    </div>
+    <div class="player-toolbar">
+      <div class="player-state"><span class="live-dot" id="liveDot"></span><span id="playerLabel">Elige una fuente</span></div>
+      <div class="server-switcher" id="serverSwitcher"></div>
+      <button type="button" class="player-retry" id="playerRetry">&#8635; Recargar</button>
+    </div>
+  </div>
+
+  <section class="lifecycle-overview">
+    <h2>Informacion del encuentro</h2>
+    <p id="evSummary">Cargando informacion…</p>
+  </section>
+
+  <div class="info-grid">
+    <div class="info-card"><h3>Partido</h3><p id="infoPartido">—</p></div>
+    <div class="info-card"><h3>Competicion</h3><p id="infoCompeticion">—</p></div>
+    <div class="info-card"><h3>Horario</h3><p id="infoHorario">—</p></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-content">
+    <p class="site-footer-note">Las senales son provistas por terceros y pueden no estar disponibles en todos los paises.</p>
+    <nav class="site-footer-links" aria-label="Enlaces del pie de pagina">
+      <a href="index.html">Inicio</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="channels.html">Canales</a>
+      <a href="sitemap.xml">Mapa del sitio</a>
+    </nav>
+    <div>&copy; <span id="year">2026</span> Futbol Libre</div>
+  </div>
+</footer>
+<button type="button" id="back-to-top" aria-label="Volver arriba" title="Volver arriba">&uarr;</button>
+
+<script src="assets/core.js"></script>
+<script src="assets/ui.js"></script>
+<script src="assets/match.js"></script>
+</body>
+</html>

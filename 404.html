@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pagina no encontrada | Futbol libre TV | Ver futbol en vivo gratis</title>
+<meta name="description" content="La pagina que buscas no existe. Vuelve a la agenda de Futbol libre TV para ver los partidos de hoy en vivo gratis, Copa Libertadores, Copa Sudamericana y Champions League.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="index.html">
+<meta name="theme-color" content="#45c51f">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+/*
+  GitHub Pages no admite reglas de reescritura, asi que las rutas limpias
+  (/agenda, /match/<slug>, /channel/<slug>) llegan aqui con un 404.
+  Este script las devuelve a su pagina real.
+
+  La raiz del sitio se deduce de la URL, para que funcione tanto si el
+  sitio se publica en la raiz del dominio como en una subcarpeta:
+    /              -> /
+    /agenda        -> /
+    /webfu/        -> /webfu/
+    /webfu/agenda  -> /webfu/
+    /webfu/match/x -> /webfu/
+*/
+(function () {
+  "use strict";
+
+  function calcularRaiz(pathname) {
+    var p = String(pathname || "").split("/").filter(Boolean);
+    var n = p.length;
+    if (n >= 2 && /^(match|evento|partido|channel|canal)$/i.test(p[n - 2])) {
+      n = n - 2;                       /* /match/<slug> */
+    } else if (n >= 1 && (/^(agenda|channels|index)$/i.test(p[n - 1]) || /\.html$/i.test(p[n - 1]))) {
+      n = n - 1;                       /* /agenda */
+    }
+    return n > 0 ? "/" + p.slice(0, n).join("/") + "/" : "/";
+  }
+
+  /* Solo se usa para la redireccion. Los enlaces del documento son relativos,
+     asi que funcionan igual en la raiz del dominio y en una subcarpeta. */
+  var raiz = calcularRaiz(location.pathname);
+
+  var partes = location.pathname.split("/").filter(Boolean);
+  var ultimo = partes[partes.length - 1] || "";
+  var anterior = partes[partes.length - 2] || "";
+
+  if (/^(agenda|channels|index)$/i.test(ultimo) && !/\.html$/i.test(ultimo)) {
+    location.replace(raiz + ultimo.toLowerCase() + ".html");
+    return;
+  }
+  if (/^(match|evento|partido)$/i.test(anterior) && ultimo) {
+    location.replace(raiz + "match.html?e=" + encodeURIComponent(ultimo.replace(/\.html$/i, "")));
+    return;
+  }
+  if (/^(channel|canal)$/i.test(anterior) && ultimo) {
+    location.replace(raiz + "channel.html?c=" + encodeURIComponent(ultimo.replace(/\.html$/i, "")));
+  }
+})();
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Futbol Libre, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="18" height="18"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 7l5.6 4.1-2.1 6.6h-7L10.4 11.1z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text">Futbol Libre<small>TV · En vivo gratis</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Secciones del sitio">
+      <a href="index.html">Inicio</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="channels.html">Canales</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container agenda-page">
+  <div class="page-title">
+    <p class="eyebrow">Error 404</p>
+    <h1>No encontramos esta pagina</h1>
+    <p>Quiza el enlace estaba mal escrito o el partido ya no esta en la agenda. Vuelve a la agenda de <strong>Futbol libre</strong> para ver los <strong>partidos de hoy en vivo gratis</strong>.</p>
+  </div>
+  <div class="btn-row">
+    <a class="btn" href="agenda.html">Ver la agenda</a>
+    <a class="btn secondary" href="index.html">Ir al inicio</a>
+  </div>
+  <section class="lifecycle-overview" style="margin-top:22px">
+    <h2>Enlaces utiles</h2>
+    <p><a href="agenda.html">Agenda deportiva completa</a> &middot; <a href="channels.html">Directorio de canales</a> &middot; <a href="sitemap.xml">Mapa del sitio</a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-content">
+    <div>&copy; 2026 Futbol Libre</div>
+  </div>
+</footer>
+</body>
+</html>
